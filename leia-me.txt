@@ -1,0 +1,29 @@
+Modelo LaTeX de dissertação/tese do PPGInf/UFPR
+Versão 0.9.4, Maio de 2016
+Autor: prof. Carlos A. Maziero
+
+Este modelo é composto pelos seguintes arquivos:
+
+  ppginf.cls		: classe com as principais características do modelo
+  main.tex		: fonte principal, que inclui os demais
+  packages.tex		: inclusão de packages úteis para a redação
+  refs.bib		: referências bibliográficas (BibTeX)
+  Makefile		: para construir o PDF ;-)
+  0-preambulo/		: diretório com as páginas iniciais
+      ficha.tex		: ficha catalográfica
+      aprovacao.tex	: folha de aprovação
+      dedica.tex	: dedicatória
+      agradece.tex	: agradecimentos
+      resumo.tex	: resumo e palavras-chave
+      abstract.tex	: abstract and keywords
+      acronimos.tex	: lista de acrônimos (siglas)
+      simbolos.tex	: lista de símbolos
+  1-intro/		: diretório do capítulo 1 (Introdução)
+      main.tex		: fonte do capítulo 1
+      figuras/		: subdir com figuras do capítulo 1
+  2-fundam		: ... (e assim por diante)
+  a1-exemplo		: Anexo 1
+
+Para compilar, digite "make".
+
+Críticas e sugestões: maziero@inf.ufpr.br

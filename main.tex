@@ -1,0 +1,122 @@
+% Este documento destina-se a servir como modelo para a produção de documentos
+% de pesquisa do PPGINF/UFPR, como projetos, dissertações e teses. A classe de
+% documento se chama "ppginf" (arquivo ppginf.cls) e define o formato básico do
+% documento. O texto está organizado em capítulos que são colocados em
+% subdiretórios separados. São definidos exemplos para a inclusão de figuras,
+% códigos-fonte e a definição de tabelas.
+%
+% Produzido por Carlos Maziero (maziero@inf.ufpr.br) em Outubro de 2015.
+% Adaptado de um modelo anterior construído pelo autor para o PPGIA/PUCPR.
+
+% Opções da classe ppginf:
+% - defesa: espaçamento 1,5, sem algumas páginas iniciais (default)
+% - final:  espaçamento simples, completa
+% - oneside: para impressão somente frente (default)
+% - twoside: para impressão frente/verso
+% - ... (demais opções aceitas pela classe "book")
+
+% Opções default: defesa, oneside
+\documentclass[defesa,oneside]{ppginf}
+%\documentclass[final,twoside]{ppginf}
+%\usepackage{cmap}
+\usepackage[square]{natbib}
+
+% configurações de diversos pacotes, inclusive o fonte principal do texto
+\include{packages}
+
+%=====================================================
+
+\begin {document}
+
+% Principais dados, usados para gerar as páginas iniciais.
+% Campos não utilizados podem ser removidos ou comentados.
+
+\title{Um modelo para dissertações e teses \\ (escrevi um título mais longo para ver como se comporta a quebra de linhas e o espaçamento entre elas)}
+
+% Estas devem ser definidas aqui para poder incorporar nos metadados do PDF
+\pchave{palavra-chave 1, palavra-chave 2, palavra-chave 3}
+\keyword{keyword 1, keyword 2, keyword 3}
+
+\author{Carlos Alberto Maziero}
+\advisor{Donald Knuth}
+\coadvisor{Leslie Lamport}
+
+\field{Ciência da Computação}		% default do PPGInf, não mudar
+
+\date{2015}
+\local{Curitiba PR}
+\instit{UFPR}{Universidade Federal do Paraná}
+
+%% Descrição do documento (obviamente, descomentar somente UMA!)
+
+\descr{Tese apresentada como requisito parcial à obtenção do grau de Doutor em Informática no Programa de Pós-Graduação em Informática, setor de Ciências Exatas, da Universidade Federal do Paraná}
+
+%\descr{Documento apresentado como requisito parcial para o exame de qualificação de Doutorado no Programa de Pós-Graduação em Informática, setor de Ciências Exatas, da Universidade Federal do Paraná}
+
+%\descr{Dissertação apresentada como requisito parcial à obtenção do grau de Mestre em Informática no Programa de Pós-Graduação em Informática, setor de Ciências Exatas, da Universidade Federal do Paraná}
+
+%\descr{Documento apresentado como requisito parcial para o exame de qualificação de Mestrado no Programa de Pós-Graduação em Informática, setor de Ciências Exatas, da Universidade Federal do Paraná}
+
+%\descr{Trabalho apresentado como requisito parcial à conclusão do Curso de Bacharelado em XYZ, setor de Ciências Exatas, da Universidade Federal do Paraná}
+
+%\descr{Trabalho apresentado como requisito parcial à conclusão da disciplina XYZ no Curso de Bacharelado em XYZ, setor de Ciências Exatas, da Universidade Federal do Paraná}
+
+%=====================================================
+
+% páginas iniciais (preâmbulo)
+\frontmatter
+\pagestyle{frontmatter}
+
+% capa e folha de rosto
+\titlepage
+
+% páginas que só aparecem na versão final (inclusão automática)
+\include{0-preambulo/ficha}		% ficha catalográfica
+\include{0-preambulo/aprovacao}		% folha de aprovação
+\include{0-preambulo/dedica}		% dedicatória
+\include{0-preambulo/agradece}		% agradecimentos
+
+% resumo e abstract
+\include{0-preambulo/resumo}
+\include{0-preambulo/abstract}
+
+% sumário e demais listas (figuras, tabelas, abreviações/siglas, símbolos)
+\tableofcontents
+\listoffigures
+\listoftables
+\include{0-preambulo/acronimos}		% ainda deve ser preenchida à mão
+\include{0-preambulo/simbolos}		% idem
+
+%=====================================================
+
+% corpo do documento
+\mainmatter
+\pagestyle{mainmatter}
+
+% inclusao de cada capítulo, alterar a gosto (do professor de Metodologia...)
+\include{1-intro/intro}			% introdução
+\include{2-fundam/fundam}		% fundamentação teórica
+\include{3-revbib/revbib}		% revisão bibliográfica (estado da arte)
+\include{4-proposta/proposta}		% proposta
+\include{5-valida/valida}		% experimentação e validação
+\include{6-conclusao/conclusao}		% conclusão
+
+%=====================================================
+
+% Estilos de bibliografia recomendados (só descomentar um estilo!)
+\bibliographystyle{apalike-ptbr}	% [Maziero et al., 2006]
+%\bibliographystyle{plain}		% [1], [1, 2]
+
+% base de bibliografia (BibTeX)
+\bibliography{refs}
+%\bibliography{ref1, ref2, ref3} % se tiver mais de um arquivo BibTeX
+
+%=====================================================
+
+% apêndices
+\appendix
+\include{a1-exemplo/exemplo}
+
+\end{document}
+
+%=====================================================
