@@ -1,5 +1,5 @@
 # modelo_tese_ufpr
-Alteração do modelo latex v0.9.4 [disponibilizado](http://web.inf.ufpr.br/pos/alunos) pela UFPR.
+Alteração do modelo latex v0.9.4 [disponibilizado](http://web.inf.ufpr.br/pos/modelotese0.9.4.tgz) pela UFPR.
 
 A alteração inclui o uso da biblioteca `natbib`, comportando novos estilos de citações:
 
