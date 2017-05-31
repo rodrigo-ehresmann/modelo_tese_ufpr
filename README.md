@@ -17,9 +17,9 @@ A alteração inclui o uso da biblioteca `natbib`, comportando novos estilos de 
 \citeyear{Chave}   % --> Ano
 
 % Mais de dois autores
-\cite{Chave}       % --> Autor et alii (Ano)
-\citep{Chave}      % --> [Autor et alii, Ano]
-\citeauthor{Chave} % --> Autor et alii
+\cite{Chave}       % --> Autor et al. (Ano)
+\citep{Chave}      % --> [Autor et al., Ano]
+\citeauthor{Chave} % --> Autor et al.
 \citeyear{Chave}   % --> Ano
 
 ```
