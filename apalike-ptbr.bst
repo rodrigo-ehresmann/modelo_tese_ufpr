@@ -845,7 +845,7 @@ FUNCTION {format.lab.names}
   s #1 "{vv~}{ll}" format.name$
   s num.names$ duplicate$
   #2 >
-    { pop$ " et~alii" * }
+    { pop$ " et~al." * }
     { #2 <
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
